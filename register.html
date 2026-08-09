@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — Paw &amp; Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="images/logo.png" alt="Paw and Ledger logo">
+    <span>Paw &amp; Ledger</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="register.html" class="active">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="pets.html">Pets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h1 style="text-align:center;">Adopter Registration</h1>
+  <p style="text-align:center; color:var(--ink-soft);">Create an account to start your adoption journey.</p>
+
+  <div class="form-wrap">
+    <div id="formMessage" class="form-message"></div>
+
+    <form id="registerForm" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Jordan Lee" required minlength="2" maxlength="60">
+          <div class="error-text" id="nameError"></div>
+        </div>
+        <div class="field">
+          <label for="adopterId">Adopter ID</label>
+          <input type="text" id="adopterId" name="adopterId" placeholder="e.g. AD2026001" required pattern="[A-Za-z0-9]{4,15}">
+          <div class="error-text" id="adopterIdError"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <div class="error-text" id="emailError"></div>
+        </div>
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="10-digit number" required pattern="[0-9]{10}">
+          <div class="error-text" id="phoneError"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required>
+          <div class="error-text" id="dobError"></div>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="At least 8 characters" required minlength="8">
+          <div class="error-text" id="passwordError"></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="petType">Preferred Pet Type</label>
+        <select id="petType" name="petType" required>
+          <option value="">-- Select a pet type --</option>
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+          <option value="Bird">Bird</option>
+          <option value="Rabbit">Rabbit</option>
+          <option value="Other">Other / No preference</option>
+        </select>
+        <div class="error-text" id="petTypeError"></div>
+      </div>
+
+      <fieldset>
+        <legend>Gender</legend>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Female" required> Female</label>
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" placeholder="House no., street, city, PIN code" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="idProof">Upload Photo ID</label>
+        <input type="file" id="idProof" name="idProof" accept="image/*,.pdf">
+      </div>
+
+      <div class="checkbox-group field">
+        <label><input type="checkbox" id="agreeTerms" name="agreeTerms" required> I agree to the adoption center's terms and home-visit policy</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Create Account</button>
+        <button type="reset" class="btn reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Paw &amp; Ledger Pet Adoption Center. All rights reserved.
+</footer>
+
+<script src="register.js"></script>
+</body>
+</html>

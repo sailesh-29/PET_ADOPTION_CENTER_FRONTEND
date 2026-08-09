@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Paw &amp; Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="images/logo.png" alt="Paw and Ledger logo">
+    <span>Paw &amp; Ledger</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html" class="active">Login</a></li>
+      <li><a href="pets.html">Pets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h1 style="text-align:center;">Adopter Login</h1>
+  <p style="text-align:center; color:var(--ink-soft);">Welcome back — log in to manage your adoption applications.</p>
+
+  <div class="form-wrap" style="max-width:440px;">
+    <div id="loginMessage" class="form-message"></div>
+
+    <form id="loginForm" novalidate>
+      <div class="field">
+        <label for="loginEmail">Email Address</label>
+        <input type="email" id="loginEmail" name="loginEmail" placeholder="you@example.com" required>
+        <div class="error-text" id="loginEmailError"></div>
+      </div>
+
+      <div class="field">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="At least 8 characters" required minlength="8">
+        <div class="error-text" id="loginPasswordError"></div>
+      </div>
+
+      <div class="checkbox-group field">
+        <label><input type="checkbox" id="showPassword"> Show Password</label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Login</button>
+        <button type="reset" class="btn reset">Reset</button>
+      </div>
+
+      <p style="margin-top:16px; font-size:13.5px;">
+        Don't have an account? <a href="register.html">Register here</a>.
+      </p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Paw &amp; Ledger Pet Adoption Center. All rights reserved.
+</footer>
+
+<script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Paw &amp; Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="images/logo.png" alt="Paw and Ledger logo">
+    <span>Paw &amp; Ledger</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="pets.html">Pets</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h1>Contact Us</h1>
+  <p>Have a question about adoption, volunteering, or a pet you've seen on our site? Reach out below.</p>
+
+  <table>
+    <caption>Center Contact Details</caption>
+    <tbody>
+      <tr><th>Address</th><td>14 Shelter Lane, Thanjavur, Tamil Nadu, India</td></tr>
+      <tr><th>Phone</th><td>+91 98765 43210</td></tr>
+      <tr><th>Email</th><td>hello@pawandledger.org</td></tr>
+      <tr><th>Hours</th><td>Tuesday – Sunday, 9:00 AM – 5:00 PM</td></tr>
+    </tbody>
+  </table>
+
+  <div class="form-wrap">
+    <div id="contactMessage" class="form-message"></div>
+    <form id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" name="contactName" required>
+        </div>
+        <div class="field">
+          <label for="contactEmail">Email Address</label>
+          <input type="email" id="contactEmail" name="contactEmail" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="contactMessageBox">Message</label>
+        <textarea id="contactMessageBox" name="contactMessageBox" required></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn">Send Message</button>
+        <button type="reset" class="btn reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Paw &amp; Ledger Pet Adoption Center. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    var msg = document.getElementById('contactMessage');
+    msg.textContent = 'Thank you! Your message has been received — we will reply within 2 business days.';
+    msg.className = 'form-message success show';
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
